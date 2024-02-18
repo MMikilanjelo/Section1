@@ -1,0 +1,149 @@
+.header {
+    height: 80px;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+}
+.left-section{
+    display: flex;
+    align-items: center;
+}
+.middle-section{
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 20px;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+}
+
+
+.hamburger-menu{
+    padding-top: 10px;
+    height: 36px;
+    margin-right:50px;
+    margin-left: 20px;
+}
+.logo-menu{
+    height: 40px;
+}
+.search-button {
+    margin-left: 4px;
+    margin-right: 4px;
+    height: 54px;
+    width: 50px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: transparent;
+  }
+.random-search-button {
+    margin-right: 1px;
+    margin-left: 1px;
+    height: 54px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid white;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.random-search-button ,
+.search-button,
+.upload-post-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.search-button .tooltip,
+.random-search-button .tooltip,
+.upload-post-container .tooltip{
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}  
+.search-button:hover .tooltip,
+.random-search-button:hover .tooltip,
+.upload-post-container:hover .tooltip{
+  opacity: 1;
+}
+
+.search-bar {
+    flex: 1;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 20px;
+    border: 2px solid rgb(192, 192, 192);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    width: 0;
+}
+.search-bar::placeholder{
+    font-size: 20px;
+}
+.search-icon{
+    width: 40px;
+}
+.random-search-icon{
+    height: 50px;
+}
+
+
+.right-section {
+    width: 300px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+.upload-icon,
+.user-post-icon,
+.notification-icon{
+    width: 32px;
+}
+.notifications-icon-container{
+    position: relative;
+}
+.notifications-count{
+    position: absolute;
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    background-color: rgb(200, 0, 0);
+    color: white;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+}
+.user-profile-picture{
+    width: 40px;
+    margin-right: 20px;
+}

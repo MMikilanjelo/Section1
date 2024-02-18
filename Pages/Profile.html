@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form name="registrationForm" action="submit.php" method="post">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" maxlength="20" required><br>
+        
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+        
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" minlength="8" required><br>
+        
+            <label>Preferred Gaming Platforms:</label><br>
+            <input type="checkbox" id="pc" name="platform" value="pc">
+            <label for="pc">PC</label><br>
+            <input type="checkbox" id="xbox" name="platform" value="xbox">
+            <label for="xbox">Xbox</label><br>
+            <input type="checkbox" id="playstation" name="platform" value="playstation">
+            <label for="playstation">PlayStation</label><br>
+        
+            <label>Preferred Gaming Genres:</label><br>
+            <input type="checkbox" id="rpg" name="genre" value="rpg">
+            <label for="rpg">RPG</label><br>
+            <input type="checkbox" id="fps" name="genre" value="fps">
+            <label for="fps">FPS</label><br>
+            <input type="checkbox" id="strategy" name="genre" value="strategy">
+            <label for="strategy">Strategy</label><br>
+        
+            <label for="gender">Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+        
+            <label for="avatar">Upload Avatar:</label><br>
+            <input type="file" id="avatar" name="avatar"><br>
+        
+            <label for="bio">Bio:</label><br>
+            <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us about yourself..."></textarea><br>
+        
+            <input type="submit" value="Join Now">
+        </form>
+    </body>
+</html>
