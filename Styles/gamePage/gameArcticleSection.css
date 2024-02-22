@@ -1,0 +1,18 @@
+.article{
+    background-color: brown;
+    width: 60%;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.preview{
+    width: 35%;
+    background-color: aquamarine;
+}
+.game-article-container{
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    padding-left: 10px;
+}

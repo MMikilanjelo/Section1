@@ -1,8 +1,106 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    </head>
-    <body>
-        <h1>Games</h1>
-    </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game Development and Games Website</title>
+    <link rel="stylesheet" type="text/css" href="/Styles/header.css">
+    <link rel="stylesheet" type="text/css" href="/Styles/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="/Styles/general.css">
+    <link rel="stylesheet" type="text/css" href="/Styles/gamePage/gameArcticleSection.css">
+    <style>
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center; 
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="left-section">
+            <img src="/image/Icons/hamburger-menu.svg" class="hamburger-menu">
+            <img src="/image/Icons/logo.svg" class="logo-menu">
+        </div>
+        <div class="middle-section">
+            <input class="search-bar" type="text" placeholder="Search">
+            <button class="search-button">
+                <img src="/image/Icons/search_icon.svg" class="search-icon">
+                <div class="tooltip">Search</div>
+            </button>
+            <button class="random-search-button">
+                <img src="/image/Icons/random_search_icon.svg" class="random-search-icon">
+                <div class="tooltip">Random Search</div>
+            </button>
+        </div>
+        <div class="right-section">
+            <div class="upload-post-container">
+                <img class="upload-icon" src="/image/Icons/add_icon.svg">
+                <div class="tooltip">Create Post</div>
+            </div>
+            <img class="user-post-icon" src="/image/Icons/user_grid_icon.svg">
+            <div class="notifications-icon-container">
+
+                <img class="notification-icon" src="/image/Icons/notification_bell_icon.svg">
+                <div class="notifications-count">3</div>
+            </div>
+            <div>
+                <img class="user-profile-picture" src="/image/Icons/user_profile_icon.svg">
+            </div>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <div class="sidebar-link">
+            <a href="Home.html">
+                <img src="/image/Icons/home_icon.svg">
+            </a>
+        </div>
+        <div class="sidebar-link">
+            <a href="Games.html">
+                <img src="/image/Icons/games_icon.svg">
+            </a>
+        </div>
+        <div class="sidebar-link">
+            <a href="Forum.html">
+                <img src="/image/Icons/forum_icon.svg">
+            </a>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <div class="game-article-container">
+                <div class="article">
+                    Article
+                </div>
+                <div class="preview">
+                    Preview
+                </div>
+                
+            </div>
+            <div class="game-article-container">
+                <div class="article">
+                    Article
+                </div>
+                <div class="preview">
+                    Preview
+                </div>
+                
+            </div>
+            
+         </section>
+
+
+    </main>
+
+
+
+</body>
+
 </html>

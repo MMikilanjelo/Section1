@@ -3,12 +3,12 @@
   display: flex;
   flex-direction: column;
   align-items:center;
-  /* Added max-width to prevent the box from going outside the inner content */
+
   max-width: 1200px;
   min-width: 300px;
-  /* Added padding to create space between the box and the edge of the container */
+  width: auto;
+
   padding: 20px;
-  /* Adjusted box-shadow to match the changes */
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 .hottest-post-container {
