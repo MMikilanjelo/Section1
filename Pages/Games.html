@@ -75,6 +75,30 @@
     </nav>
     <main>
         <section>
+            <div class="search-wrapper">
+                <div class="platform-container">
+                    <h2>Select a Game Genre:</h2>
+                    <ul class="genre-list">
+                        <li><input type="radio" name="genre" value="PS" checked> PS</li>
+                        <li><input type="radio" name="genre" value="XBOX"> XBOX</li>
+                        <li><input type="radio" name="genre" value="PC"> PC</li>
+                    </ul>
+                    <button id="search-button">Search</button>
+                </div>
+                <div class="genre-container">
+                    <h2>Select a Game Genre:</h2>
+                    <select id="genre-select">
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="rpg">Role-playing (RPG)</option>
+                        <option value="strategy">Strategy</option>
+                    </select>
+                    <button id="search-button">Search</button>
+                </div>
+            </div>
+            
+        </section>
+        <section>
             <div class="game-article-container">
                 <div class="article">
                     Article
