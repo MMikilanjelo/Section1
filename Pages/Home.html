@@ -8,16 +8,140 @@
     <link rel="stylesheet" type="text/css" href="/Styles/sidebar.css">
     <link rel="stylesheet" type="text/css" href="/Styles/posts.css">
     <link rel="stylesheet" type="text/css" href="/Styles/general.css">
+    <link rel="stylesheet" type="text/css" href="/Styles/checkbox.css">
     <style>
         footer {
             background-color: #333;
             color: #fff;
             padding: 10px 20px;
-            text-align: center; 
+            text-align: center;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
+        
+        dl {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        dt {
+            flex-basis: 100%;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 20px;
+            color: #333;
+        }
+        
+        dd {
+            flex-basis: calc(50% - 10px); /* Two columns */
+            margin-top: 10px;
+        }
+        
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        
+        option {
+            font-size: 16px;
+        }
+        
+        .filter-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 800px;
+        }
+        
+        .genre-selection {
+            width: 400px;
+        }
+        
+        .programing-language-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        
+        .programing-language-table th,
+        .programing-language-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .programing-language-table th {
+            background-color: #f2f2f2;
+        }
+        
+        .programing-language-table tr:hover {
+            background-color: #f2f2f2;
+        }
+        .filter-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            align-self:flex-start;
+        }
+        
+        .filter-wrapper,
+        .programing-language-table {
+            display: none;
+        }
+        
+        .filter-button-wrapper{
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            justify-content: space-between;
+
+        }
+
+        .filter-checkbox:checked ~ .filter-wrapper,
+        .filter-checkbox:checked ~ .programing-language-table {
+            display: flex;
+        }
+        @media screen and (max-width: 768px) {
+            .filter-wrapper {
+                width: 100%;
+                flex-direction: column;
+            }
+        
+            .genre-selection {
+                width: 100%;
+            }
+        
+            dd {
+                flex-basis: 100%; /* Full width for definitions */
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            dt {
+                font-size: 18px; /* Decrease font size for smaller screens */
+            }
+        
+            select {
+                font-size: 14px; /* Decrease font size for smaller screens */
+            }
+        
+            .programing-language-table th,
+            .programing-language-table td {
+                padding: 8px; /* Decrease padding for smaller screens */
+            }
+        }
+
     </style>
 </head>
 
@@ -74,9 +198,119 @@
         </div>
     </nav>
     <main>
+        <section>
+            <div class = "filter-button-wrapper">
+                <input type="checkbox" id="filterCheckbox" class="filter-checkbox">
+                <label for="filterCheckbox" class="filter-button">Filters</label>
+          
+
+            <div class="filter-wrapper">
+                <div class="language-selection">
+                    <label class="form-control">
+                        PC
+                        <input type="checkbox" id="pc" name="platform" value="PC">
+                    </label>
+                    <label class="form-control">
+                        Mac
+                        <input type="checkbox" id="mac" name="platform" value="MAC">
+                    </label>
+                    <label class="form-control">
+                        Linux
+                        <input type="checkbox" id="linux" name="platform" value="Linux">
+                    </label>
+                </div>
+
+                <div class="genre-selection">
+                    <dl>
+                        <dt>Жанри ігор</dt>
+                        <dd>
+                            <select>
+                                <option value="action">Екшн</option>
+                                <option value="adventure">Пригодницькі</option>
+                                <option value="rpg">Рольові</option>
+                                <option value="strategy">Стратегічні</option>
+                            </select>
+                        </dd>
+                        <dt>Платформи</dt>
+                        <dd>
+                            <select>
+                                <option value="PC">PC</option>
+                                <option value="PlayStation">PlayStation</option>
+                                <option value="Xbox">Xbox</option>
+                                <option value="Nintendo Switch">Nintendo Switch</option>
+                            </select>
+                        </dd>
+                        <dt>Мови програмування</dt>
+                        <dd>
+                            <select>
+                                <option value="JavaScript">JavaScript</option>
+                                <option value="C++">C++</option>
+                                <option value="Python">Python</option>
+                                <option value="Java">Java</option>
+                            </select>
+                        </dd>
+                        <dt>Інструменти розробки</dt>
+                        <dd>
+                            <select>
+                                <option value="Unity">Unity</option>
+                                <option value="Unreal Engine">Unreal Engine</option>
+                                <option value="Godot">Godot</option>
+                                <option value="Phaser">Phaser</option>
+                            </select>
+                        </dd>
+                        <dt>Популярні ігри</dt>
+                        <dd>
+                            <select>
+                                <option value="The Legend of Zelda">The Legend of Zelda</option>
+                                <option value="The Witcher">The Witcher</option>
+                                <option value="Fortnite">Fortnite</option>
+                                <option value="Minecraft">Minecraft</option>
+                            </select>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="programing-language-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Popular Languages</td>
+                            <td>JavaScript</td>
+                            <td>Widely used for web-based games and game development frameworks like Phaser.js</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>C++</td>
+                            <td>High-performance language used in game engines like Unreal Engine and game development
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Popular Game Engines</td>
+                            <td>Unity</td>
+                            <td>A versatile game engine used for both 2D and 3D game development</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Unreal Engine</td>
+                            <td>A powerful game engine known for its graphical capabilities and versatility</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+
+
+        </section>
         <section class="posts-section">
-            <h1 class="post-section-header">Hottest</h1>
-            
+            <h1 class="post-section-header" , style="height: auto;">Hottest</h1>
+
             <div class="hottest-post-container">
                 <div class="hottest-post">
                     <div class="post">
@@ -93,11 +327,12 @@
                                 </div>
                             </div>
                             <div class="post-text-container">
-                                <span class="styled-text">Hi i want to talk about ts and huge popularity of React...</span>
+                                <span class="programing-language-text">Hi i want to talk about ts and huge popularity of
+                                    React...</span>
                             </div>
                         </div>
                         <div class="post-description">
-                            <button class="open-post-button"> Read More</button>
+                            <button class="open-post-button"><strong>Read More</strong></button>
                         </div>
                     </div>
 
@@ -117,11 +352,12 @@
                                 </div>
                             </div>
                             <div class="post-text-container">
-                                <span class="styled-text">Hi i want to talk about ts and huge popularity of React...</span>
+                                <span class="programing-language-text">Hi i want to talk about ts and huge popularity of
+                                    React...</span>
                             </div>
                         </div>
                         <div class="post-description">
-                            <button class="open-post-button"> Read More</button>
+                            <button class="open-post-button"><strong>Read More</strong></button>
                         </div>
                     </div>
 
@@ -141,18 +377,19 @@
                                 </div>
                             </div>
                             <div class="post-text-container">
-                                <span class="styled-text">Hi i want to talk about ts and huge popularity of React...</span>
+                                <span class="programing-language-text">Hi i want to talk about ts and huge popularity of
+                                    React...</span>
                             </div>
                         </div>
                         <div class="post-description">
-                            <button class="open-post-button"> Read More</button>
+                            <button class="open-post-button"><strong>Read More</strong></button>
                         </div>
                     </div>
 
                 </div>
-                
+
             </div>
-
+        </div>
         </section>
 
     </main>
